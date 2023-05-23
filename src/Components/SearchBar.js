@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import youtube from "../apis/youtube.js"
 
-const SearchBar = () => {
+const SearchBar = ({ addVideos }) => {
 
     const [searchTerm, setSearchTerm] = useState("beagles");
+
+    // add a useEffect here later to search for a default thing
 
     const getVideos = () => {
 
@@ -13,7 +15,7 @@ const SearchBar = () => {
                 type: 'video'
             }
         })
-        .then((response) => console.log(response))
+        .then((response) => addVideos(response.data.items))
         .catch((error) => console.log("error msg API", error ))
         
     }

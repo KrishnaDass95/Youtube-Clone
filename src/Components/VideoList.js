@@ -1,6 +1,8 @@
-
+import React, { useEffect } from "react";
 
 const VideoList = ({ videos, setCurrentVideo }) => {
+
+    useEffect(() => setCurrentVideo(videos[0]), [videos]);
 
     return (
 

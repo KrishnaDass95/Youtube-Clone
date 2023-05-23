@@ -6,6 +6,7 @@ const SearchBar = ({ addVideos }) => {
     const [searchTerm, setSearchTerm] = useState("beagles");
 
     // add a useEffect here later to search for a default thing
+    useEffect(() => getVideos(), [])
 
     const getVideos = () => {
 

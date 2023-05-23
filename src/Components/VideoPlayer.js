@@ -1,7 +1,10 @@
+
+
+
 const VideoPlayer = ({ videoToPlay }) => {
   return (
     <div>
-      {videoToPlay === null ? (
+      {videoToPlay === null || videoToPlay === undefined ? (
         <h1>Loading...</h1>
       ) : (
         <iframe
